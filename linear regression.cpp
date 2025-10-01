@@ -38,11 +38,9 @@ int main(){
     for (int i=0; i<N; i++) {
 		X[i][0] = 1;              
         X[i][1] = x[i][0];
-		//X[i][2] = x[i][0]*x[i][0]; 
         Y[i] = x[i][1];            
     }
-    
-	
+		
 	double sumx[A]={0};
 	double sumy=0;
 	double sumxx[A][A]={0},sumxy[A]={0};
@@ -89,7 +87,10 @@ int main(){
 	}
 	double resultofa[A];
 	gausseliminate(arr,resultofa);
-	printf("f(X) = %.5lf + %.5lfX1\n",resultofa[0],resultofa[1]);
-	
+	double Xcal = 65;
+	double fx = resultofa[0] + resultofa[1]*Xcal;
+	//printf("f(X) = %.5lf + %.5lfX1\n",resultofa[0],resultofa[1]);
+	printf("f(%.2lf) =  %.5lf + %.5lf(%.2lf)\n",Xcal,resultofa[0],resultofa[1],Xcal);
+	printf("f(%.2lf) = %.5lf\n",Xcal,fx);
 	return 0;
 }
