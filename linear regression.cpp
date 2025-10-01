@@ -89,8 +89,7 @@ int main(){
 	gausseliminate(arr,resultofa);
 	double Xcal = 65;
 	double fx = resultofa[0] + resultofa[1]*Xcal;
-	//printf("f(X) = %.5lf + %.5lfX1\n",resultofa[0],resultofa[1]);
-	printf("f(%.2lf) =  %.5lf + %.5lf(%.2lf)\n",Xcal,resultofa[0],resultofa[1],Xcal);
+	printf("f(X) = %.5lf + %.5lfX1\n",resultofa[0],resultofa[1]);
 	printf("f(%.2lf) = %.5lf\n",Xcal,fx);
 	return 0;
 }
