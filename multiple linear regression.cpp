@@ -68,7 +68,7 @@ int main(){
 			else if(i==0&&j>0){
 				arr[i][j] = sumx[j];
 			}
-			else if(j>0&&i>0){
+			else if(j>=i){
 				arr[i][j] = sumxx[i][j];
 			}
 			else{
