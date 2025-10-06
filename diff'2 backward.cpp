@@ -10,20 +10,7 @@ double fprime2(double x){
 	return (1.0/9.0)*exp(x/3)+2;
 }
 double backward(double x,double h){
-	double xi[4]={0};
-	for(int i=0;i<4;i++){
-		if(i==0){
-			xi[i] = x;
-		}
-		else{
-			xi[i] = x-i*h;
-		}
-	}
-	double fxi[4]={0};
-	for(int i=0;i<4;i++){
-		fxi[i] = f(xi[i]);
-	}
-	double backwardcal = (2*fxi[0]-5*fxi[1]+4*fxi[2]-fxi[3])/pow(h,2);
+	double backwardcal = (2*f(x-0*h)-5*f(x-1*h)+4*f(x-2*h)-f(x-3*h))/pow(h,2);
 	return backwardcal;
 }
 int main(){
