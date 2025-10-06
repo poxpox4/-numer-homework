@@ -7,25 +7,7 @@ double fprime1(double x){
 	return exp(x);
 }
 double central(double x,double h){
-	double xip[2]={0};
-	double xin[2]={0};
-	for(int i=0;i<2;i++){
-		if(i==0){
-			xip[i] = x;
-			xin[i] = x;
-		}
-		else{
-			xip[i] = x+h;
-			xin[i] = x-h;
-		}
-	}
-	double fxip[2]={0};
-	double fxin[2]={0};
-	for(int i=0;i<2;i++){
-		fxip[i] = f(xip[i]);
-		fxin[i] = f(xin[i]);
-	}
-	double central = (fxip[1]-fxin[1])/(2*h);
+	double central = (f(x+1*h)-f(x-1*h))/(2*h);
 	return central;
 }
 int main(){
