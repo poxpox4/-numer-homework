@@ -62,9 +62,6 @@ int main(){
 			if(i==0&&j==0){
 				arr[i][j] = N;
 			}
-//			else if(i==0&&j==A){
-//				arr[i][j] = sumy;
-//			}
 			else if(i==0&&j>0){
 				arr[i][j] = sumx[j];
 			}
